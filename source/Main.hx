@@ -30,6 +30,8 @@ class Main extends Sprite
 		}
 		#end
 
+		trace('DanCOS 1.0 (build $BUILD)');
+
 		addChild(new FlxGame(0, 0, desktop.MainDesktop));
 	}
 }
