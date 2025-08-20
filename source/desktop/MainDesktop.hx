@@ -1,9 +1,5 @@
 package desktop;
 
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.FlxState;
-
 class MainDesktop extends FlxState
 {
 	public var dancosVersionString(get, never):String;
@@ -15,8 +11,9 @@ class MainDesktop extends FlxState
 	{
 		super();
 
-		var backdrop = new FlxSprite().loadGraphic(Assets.getImagePath('backdrops/${Main.SETTINGS.backdrop}'));
-		backdrop.scale.set((backdrop.width / FlxG.width), (backdrop.width / FlxG.height));
+		var backdrop = new FlxSprite().loadGraphic(Assets.getImagePath('backdrops/${Main.SETTINGS.backdrop.filename}'));
+		if (Main.SETTINGS.backdrop.scale_to_fit)
+			backdrop.scale.set((FlxG.width / backdrop.width), (FlxG.height / backdrop.height));
 		backdrop.screenCenter();
 		add(backdrop);
 

@@ -1,4 +1,5 @@
-import desktop.settings.DesktopSpecifications;
+import desktop.settings.*;
+import flixel.*;
 import sphis.Assets;
 
 using StringTools;

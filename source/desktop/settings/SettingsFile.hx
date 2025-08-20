@@ -2,5 +2,9 @@ package desktop.settings;
 
 typedef SettingsFile =
 {
-	var backdrop:String;
+	var backdrop:
+		{
+			var filename:String;
+			var scale_to_fit:Bool;
+		};
 }
