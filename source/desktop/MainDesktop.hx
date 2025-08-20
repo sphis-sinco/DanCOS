@@ -20,7 +20,7 @@ class MainDesktop extends FlxState
 		{
 			backdrop.scale.set((FlxG.width / backdrop.width), (FlxG.height / backdrop.height));
 
-			trace('Scaled up backdrop to ${backdrop.scale}');
+			trace('Backdrop Scale: ${backdrop.scale}');
 		}
 		backdrop.screenCenter();
 		add(backdrop);
