@@ -1,3 +1,4 @@
+import desktop.settings.DesktopSpecifications;
 import sphis.Assets;
 
 using StringTools;
