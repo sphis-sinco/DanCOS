@@ -1,8 +1,8 @@
-package;
+package desktop;
 
 import flixel.FlxState;
 
-class PlayState extends FlxState
+class MainDesktop extends FlxState
 {
 	override public function create()
 	{
