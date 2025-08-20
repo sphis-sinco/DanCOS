@@ -9,14 +9,13 @@ class Main extends Sprite
 
 	public static dynamic function get_BUILD():Int
 	{
-		return Assets.getFileTextContent('build.txt', false);
+		return Std.parseInt(Assets.getFileTextContent('build.txt', false));
 	}
 
 	public function new()
 	{
 		super();
 
-		
 		#if (sys && debug)
 		var sysPath = Sys.programPath().substring(0, Sys.programPath().indexOf('\\export')).replace('\\', '/');
 		sysPath += '/build';
