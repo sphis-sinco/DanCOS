@@ -1,6 +1,7 @@
 package desktop;
 
 import flixel.text.FlxText;
+import flixel.util.FlxColor;
 
 class MainDesktop extends FlxState
 {
@@ -25,9 +26,20 @@ class MainDesktop extends FlxState
 		backdrop.screenCenter();
 		add(backdrop);
 
+		var startBar = new FlxSprite().makeGraphic(FlxG.width, 64, FlxColor.GRAY);
+		startBar.setPosition(0, FlxG.height - startBar.height);
+		add(startBar);
+
+		var startButton = new FlxSprite().loadGraphic(Assets.getImagePath('start'));
+		startButton.scale.set(2, 2);
+		startButton.updateHitbox();
+		startButton.x = 0;
+		startButton.y = FlxG.height - startButton.height;
+		add(startButton);
+
 		versionText.text = dancosVersionString;
 		versionText.size = 16;
-		versionText.setPosition(FlxG.width - versionText.width, FlxG.height - versionText.height);
+		versionText.setPosition(FlxG.width - versionText.width, FlxG.height - (versionText.height + startBar.height));
 		add(versionText);
 	}
 
