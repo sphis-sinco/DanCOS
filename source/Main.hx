@@ -1,10 +1,17 @@
 package;
 
+import desktop.settings.SettingsFile;
 import flixel.FlxGame;
+import haxe.Json;
 import openfl.display.Sprite;
 
 class Main extends Sprite
 {
+	public static var SETTINGS(get, never):SettingsFile;
+
+	static function get_SETTINGS():SettingsFile
+		return Assets.getFileJsonContent('settings.json');
+
 	public static var BUILD(get, never):Int;
 
 	public static dynamic function get_BUILD():Int

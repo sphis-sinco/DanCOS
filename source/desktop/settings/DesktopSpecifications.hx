@@ -10,5 +10,5 @@ class DesktopSpecifications
 	public static var Version(get, never):Float;
 
 	static function get_Version():Float
-		return 1.0;
+		return 1.00;
 }

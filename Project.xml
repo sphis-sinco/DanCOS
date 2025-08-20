@@ -42,7 +42,7 @@
 
 	<source path="source" />
 	<assets path="assets" />
-	<assets path="windows" rename="assets/windows"/>
+	<assets path="windows/" rename="assets/data"/>
 	<assets path="build" rename="assets/build.txt" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
